@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Categories from "./components/Categories";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
@@ -12,7 +12,10 @@ import Products from "./components/Products";
 import "./scss/index.scss";
 
 export default function App() {
-  return <div className="app">
+
+  const [theme, setTheme] = useState("dark");
+
+  return <div className="app" data-theme={theme}>
     <ScrollToTop />
     <NavBar />
     <Home />
